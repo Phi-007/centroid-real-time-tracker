@@ -249,11 +249,13 @@ pip install numpy opencv-python ultralytics
 ### 2. Data & Model Preparation
 
 1. **🖼️ Extract Video Frames:** Convert your input video file into a folder of sequential images:
+   for example you can use `ffmpeg` as following:
    ```bash
    ffmpeg -i input_video.mp4 -q:v 2 input_frames/frame_%04d.png
    ```
+   or you can simply use `OpenCV` to extract the frames from a video (which is what I did for this project).
 
-2. **🧠 Detector Weights:** Place your fine-tuned YOLOv10 weights file (e.g., `best.pt`) in your project directory.
+3. **🧠 Detector Weights:** Place your fine-tuned YOLOv10 weights file (e.g., `best.pt`) in your project directory.
 
 ---
 
